@@ -7,5 +7,7 @@ public class Thing
     public string Description { get; set; }
     public DateTime CreatedDate { get; set; }
     public ICollection<Review> Reviews { get; set; }
+    public ICollection<ThingCategory> ThingCategories { get; set; }
+    public ICollection<ThingOwner> ThingOwners { get; set; }
 }
 
