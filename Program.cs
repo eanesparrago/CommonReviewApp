@@ -1,4 +1,6 @@
 using CommonReviewApp.Data;
+using CommonReviewApp.Interface;
+using CommonReviewApp.Repositories;
 using Microsoft.EntityFrameworkCore;
 using ThingReviewApp;
 
@@ -9,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddTransient<Seed>();
+
+builder.Services.AddScoped<IThingRepository, ThingRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
